@@ -1,0 +1,12 @@
+{
+    "schemas": {
+        "Cars": {
+            "uniqueId": "id",
+            "dataFile": "./example/Cars.json"
+        },
+        "Trucks": {
+            "uniqueId": "id",
+            "dataFile": "./example/Trucks.json"
+        }
+    }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "guid": "aaaaaaaa-1b1b-4b1b-8b1b-1b1b1b1b1b1b",
+    "brand": "Toyota",
+    "model": "Tacoma",
+    "year": 2019,
+    "price": 20000
+  },
+  {
+    "id": 2,
+    "guid": "bbbbbbbb-1b1b-4b1b-8b1b-1b1b1b1b1b2b",
+    "brand": "Toyota",
+    "model": "Tundra",
+    "year": 2019,
+    "price": 25000
+  },
+  {
+    "id": 3,
+    "guid": "cccccccc-1b1b-4b1b-8b1b-1b1b1b1b1b3b",
+    "brand": "Toyota",
+    "model": "Sequoia",
+    "year": 2019,
+    "price": 30000
+  },
+  {
+    "id": 4,
+    "guid": "dddddddd-1b1b-4b1b-8b1b-1b1b1b1b1b4b",
+    "brand": "Toyota",
+    "model": "Land Cruiser",
+    "year": 2019,
+    "price": 35000
+  },
+  {
+    "id": 5,
+    "guid": "eeeeeeee-1b1b-4b1b-8b1b-1b1b1b1b1b5b",
+    "brand": "Toyota",
+    "model": "4Runner",
+    "year": 2019,
+    "price": 40000
+  }
+]

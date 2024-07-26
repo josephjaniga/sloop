@@ -1,0 +1,22 @@
+{
+  "name": "sloop",
+  "version": "0",
+  "description": "",
+  "main": "src/index.js",
+  "bin": {
+    "sloop": "src/cli/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.617.0",
+    "@aws-sdk/credential-providers": "^3.617.0",
+    "@aws-sdk/lib-storage": "^3.617.0",
+    "commander": "^12.1.0",
+    "dotenv": "^16.4.5"
+  }
+}

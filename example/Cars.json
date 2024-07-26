@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "guid": "a1b4b3b4-1b1b-4b1b-8b1b-1b1b1b1b1b1b",
+    "brand": "Toyota",
+    "model": "Corolla",
+    "year": 2019,
+    "price": 20000
+  },
+  {
+    "id": 2,
+    "guid": "b1b4b3b4-1b1b-4b1b-8b1b-1b1b1b1b1b2b",
+    "brand": "Toyota",
+    "model": "Camry",
+    "year": 2019,
+    "price": 25000
+  },
+  {
+    "id": 3,
+    "guid": "c1b4b3b4-1b1b-4b1b-8b1b-1b1b1b1b1b3b",
+    "brand": "Toyota",
+    "model": "RAV4",
+    "year": 2019,
+    "price": 30000
+  },
+  {
+    "id": 4,
+    "guid": "d1b4b3b4-1b1b-4b1b-8b1b-1b1b1b1b1b4b",
+    "brand": "Toyota",
+    "model": "Highlander",
+    "year": 2019,
+    "price": 35000
+  },
+  {
+    "id": 5,
+    "guid": "e1b4b3b4-1b1b-4b1b-8b1b-1b1b1b1b1b5b",
+    "brand": "Toyota",
+    "model": "4Runner",
+    "year": 2019,
+    "price": 40000
+  }
+]
