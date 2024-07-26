@@ -5,7 +5,7 @@ const { fromIni } = require("@aws-sdk/credential-providers");
 const { Upload } = require("@aws-sdk/lib-storage");
 const { folderExists } = require('../../helpers');
 
-module.exports.setupAction = async () => {
+module.exports.setupAction = async (options) => {
 
     let credentials;
     const bucket = process.env.BUCKET_NAME;
@@ -41,14 +41,15 @@ module.exports.setupAction = async () => {
     console.log(`Bucket: ${bucket}`);
     for (const key in sloopConfig.schemas) {
 
-        // check for existence of these folders in the bucket
-        await folderExists(bucket, key, s3).then((exists) => {
-            if (exists) {
-                console.log(`Folder: ${key} already exists`);
-            } else {
-                console.log(`Folder: ${key} does not exist`);
-            }
-        });
+        const exists = await folderExists(bucket, key, s3);
+        if (exists && !options.force) {
+            console.log(`Folder: ${key} already exists, skipping...`);
+            continue;
+        } else if (exists && options.force) {
+            console.log(`Folder: ${key} already exists, but force flag is set. Proceeding...`);
+        } else {
+            console.log(`Folder: ${key} does not exist`);
+        }
 
         console.log(`Creating folder: ${key}`);
         const upload = new Upload({

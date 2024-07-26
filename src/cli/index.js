@@ -20,6 +20,7 @@ program
 program
     .command('setup')
     .description('Setup sloop')
-    .action(setupAction);
+    .option('-f, --force', 'Force setup even if folders already exist')
+    .action((options) => setupAction(options));
 
 program.parse(process.argv);
