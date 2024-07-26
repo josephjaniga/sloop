@@ -1,7 +1,7 @@
 {
   "name": "sloop",
-  "version": "0",
-  "description": "",
+  "version": "0.0.1",
+  "description": "A tool for creating and accessing data lakes on AWS S3",
   "main": "src/index.js",
   "bin": {
     "sloop": "src/cli/index.js"
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["aws", "s3", "data-lake"],
   "author": "",
   "license": "ISC",
   "dependencies": {

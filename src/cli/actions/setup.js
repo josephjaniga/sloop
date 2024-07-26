@@ -5,27 +5,27 @@ const { fromIni } = require("@aws-sdk/credential-providers");
 const { Upload } = require("@aws-sdk/lib-storage");
 const { folderExists } = require('../../helpers');
 
-let credentials;
-const bucket = process.env.BUCKET_NAME;
-
-// Check if the AWS profile is set in the .env file
-if (!process.env.AWS_PROFILE) {
-    throw new Error(
-        "Please set the AWS profile in the" +
-        " .env file to use the AWS SDK"
-    );
-} else {
-    credentials = fromIni({ profile: process.env.AWS_PROFILE });
-}
-
-const s3 = new S3({
-    credentials: credentials,
-    region: "us-east-1", // Specify your bucket's region
-});
-
-const sloopConfig = JSON.parse(fs.readFileSync('sloop.json'));
-
 module.exports.setupAction = async () => {
+
+    let credentials;
+    const bucket = process.env.BUCKET_NAME;
+
+    // Check if the AWS profile is set in the .env file
+    if (!process.env.AWS_PROFILE) {
+        throw new Error(
+            "Please set the AWS profile in the" +
+            " .env file to use the AWS SDK"
+        );
+    } else {
+        credentials = fromIni({ profile: process.env.AWS_PROFILE });
+    }
+
+    const s3 = new S3({
+        credentials: credentials,
+        region: "us-east-1", // Specify your bucket's region
+    });
+
+    const sloopConfig = JSON.parse(fs.readFileSync('sloop.json'));
 
     if (!sloopConfig) {
         console.warn(
