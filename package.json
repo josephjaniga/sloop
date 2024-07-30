@@ -2,7 +2,7 @@
   "name": "sloop",
   "version": "0.0.1",
   "description": "A tool for creating and accessing data lakes on AWS S3",
-  "main": "src/index.js",
+  "main": "src/sdk/index.js",
   "bin": {
     "sloop": "src/cli/index.js"
   },
