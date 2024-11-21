@@ -52,7 +52,7 @@ Yes, we are using S3 as a database - we make it easy to use and its cheap!
      ```
     - each record needs a unique guid
       - files in the bucket will be named after the guid
-    - a lookup table is created  in the folder
+    - a lookup table is created in the folder
       - the keys are the `uniqueId` setup in your sloop.json
       - the values are the guid / filename on the bucket
       - allowing us to find a record by uniqueId

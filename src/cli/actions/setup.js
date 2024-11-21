@@ -3,7 +3,7 @@ const fs = require('fs');
 const { S3 } = require("@aws-sdk/client-s3");
 const { fromIni } = require("@aws-sdk/credential-providers");
 const { Upload } = require("@aws-sdk/lib-storage");
-const { folderExists } = require('../../helpers');
+const { folderExists, createGuid} = require('../../helpers');
 
 module.exports.setupAction = async (options) => {
 
@@ -42,10 +42,10 @@ module.exports.setupAction = async (options) => {
     for (const key in sloopConfig.schemas) {
 
         const exists = await folderExists(bucket, key, s3);
-        if (exists && !options.force) {
+        if (exists && options?.force !== true) {
             console.log(`Folder: ${key} already exists, skipping...`);
             continue;
-        } else if (exists && options.force) {
+        } else if (exists && options?.force === true) {
             console.log(`Folder: ${key} already exists, but force flag is set. Proceeding...`);
         } else {
             console.log(`Folder: ${key} does not exist`);
@@ -70,15 +70,23 @@ module.exports.setupAction = async (options) => {
 
         // create a new record for each in the folder
         for (let record of data){
+            // ensure a guid exists if not create a new random one
+            if (!record.guid) {
+                record.guid = createGuid();
+                console.log(`Creating new guid: ${record.guid}`);
+            }
             const putObjectParams = {
                 Bucket: bucket,
                 Key: `${key}/${record.guid}`,
                 Body: JSON.stringify(record, null, 4),
                 ContentType: 'application/json',
             };
-            s3.putObject(putObjectParams).then((result) => {
-                console.log(`${bucket}/${key}/${record.guid} - done`);
-            });
+            try {
+                await s3.putObject(putObjectParams);
+            } catch (error) {
+                throw new Error(error);
+            }
+            console.log(`${bucket}/${key}/${record.guid} - done`);
             lookupTable[record.id] = record.guid;
         }
 
@@ -90,10 +98,28 @@ module.exports.setupAction = async (options) => {
             ContentType: 'application/json',
         };
 
-        s3.putObject(lookupTablePutObjectParams).then((result) => {
-            console.log(`${bucket}/${key}/lookupTable.json - done`);
-            console.log(JSON.stringify(lookupTable, null, 4));
-        });
+        await s3.putObject(lookupTablePutObjectParams);
+
+        console.log(`${bucket}/${key}/lookupTable.json - done`);
+        console.log(JSON.stringify(lookupTable, null, 4));
+
+        /**
+         * create a file in the folder named all.json.  It should
+         * contain an array of all the data, for each of the records
+         * it should be the same as the data file.
+         *
+         * It will be used to easily query for all the data in the folder,
+         * or it can be used to filter faster
+         */
+        const allPutObjectParams = {
+            Bucket: bucket,
+            Key: `${key}/all.json`,
+            Body: JSON.stringify(data, null, 4),
+            ContentType: 'application/json',
+        };
+
+        await s3.putObject(allPutObjectParams)
+        console.log(`${bucket}/${key}/all.json - done`);
     }
 
     // add a "setup": true key value pair to the sloop.json to each schema after setting up each folder
