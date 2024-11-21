@@ -1,10 +1,10 @@
 /**
- * This function should perform the lookup table validation
- *
- * @param {Object} options
- * @param {Object} options.data - the new record data json object to be validated
- * @param {Object} options.lookupTableJson - the lookup table json object
- * @returns {void} - This function should not return anything
+ * Validates a record against the lookupTable.json to ensure no duplicate IDs or GUIDs
+ * 
+ * @param {Object} options - The options object
+ * @param {Object} options.data - The record data to validate
+ * @param {Object} options.lookupTableJson - The current lookup table JSON object
+ * @returns {void} Throws an error if validation fails
  */
 function validation_LookupTableJson(options) {
 

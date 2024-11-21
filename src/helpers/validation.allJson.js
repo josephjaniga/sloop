@@ -1,10 +1,10 @@
 /**
- * This function should perform the all.json validation
- *
- * @param {Object} options
- * @param {Object} options.data - the new record data json object to be validated
- * @param {Object} options.allJson - the all.json object
- * @returns {void} - This function should not return anything
+ * Validates a record against the all.json file to ensure no duplicates
+ * 
+ * @param {Object} options - The options object
+ * @param {Object} options.data - The record data to validate
+ * @param {Array} options.allJson - The current all.json array
+ * @returns {void} Throws an error if validation fails
  */
 function validation_AllJson(options) {
 

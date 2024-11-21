@@ -3,14 +3,14 @@ const {
 } = require("./getObjectOutputToJson");
 
 /**
- * This function should get one record from a collection by guid
- *
- * @param {Object} options
- * @param {String} options.guid - the guid of the record to get
- * @param {String} options.bucket - the identifier of the s3 bucket
- * @param {String} options.collection - the collection to get the all.json file from
- * @param {Object} options.s3 - the s3 client
- * @returns {Promise<Object>} - the json object of the all.json file
+ * Retrieves a single record by GUID from a collection in S3
+ * 
+ * @param {Object} options - The options object
+ * @param {string} options.guid - The GUID of the record to retrieve
+ * @param {string} options.bucket - The S3 bucket name
+ * @param {string} options.collection - The collection/folder name
+ * @param {Object} options.s3 - The AWS S3 client instance
+ * @returns {Promise<Object>} The requested record as a JSON object
  */
 async function getOne(options) {
 

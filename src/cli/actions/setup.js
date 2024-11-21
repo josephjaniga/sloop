@@ -41,7 +41,7 @@ module.exports.setupAction = async (options) => {
     console.log(`Bucket: ${bucket}`);
     for (const key in sloopConfig.schemas) {
 
-        const exists = await folderExists(bucket, key, s3);
+        const exists = await folderExists({ bucket, collection: key, s3 });
         if (exists && options?.force !== true) {
             console.log(`Folder: ${key} already exists, skipping...`);
             continue;

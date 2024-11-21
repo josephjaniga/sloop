@@ -26,7 +26,7 @@ describe('Cars Collection', function() {
     
         it('should teardown the Cars collection correctly', async function() {
             // Verify the Cars folder does not exist
-            const carsFolderExists = await folderExists(bucket, 'Cars', s3);
+            const carsFolderExists = await folderExists({ bucket, collection: 'Cars', s3 });
             expect(carsFolderExists).toBe(false);
         });
     
@@ -54,7 +54,7 @@ describe('Cars Collection', function() {
     
         it('Cars folder should exist', async function() {
             // Verify the Cars folder does not exist
-            const carsFolderExists = await folderExists(bucket, 'Cars', s3);
+            const carsFolderExists = await folderExists({ bucket, collection: 'Cars', s3 });
             expect(carsFolderExists).toBe(true);
         });    
     

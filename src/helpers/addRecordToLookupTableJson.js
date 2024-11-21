@@ -3,15 +3,15 @@ const {
 } = require("./validation.lookupTableJson");
 
 /**
- * This function accepts the data for a new record and adds it to the lookupTable.json file
- *
- * @param {Object} options
- * @param {Object} options.data - the new record data json object to be validated
- * @param {Object} options.lookupTableJson - the lookup table json object
- * @param {Object} options.s3 - the s3 object
- * @param {string} options.bucket - the bucket name
- * @param {string} options.collection - the collection name
- * @returns {void} - This function should not return anything
+ * Adds a new record to the lookupTable.json file in S3
+ * 
+ * @param {Object} options - The options object
+ * @param {Object} options.data - The new record data to be added
+ * @param {Object} options.lookupTableJson - The current lookup table JSON object
+ * @param {Object} options.s3 - The AWS S3 client instance
+ * @param {string} options.bucket - The S3 bucket name
+ * @param {string} options.collection - The collection/folder name
+ * @returns {Promise<void>} 
  */
 async function addRecordToLookupTableJson(options) {
 
