@@ -9,7 +9,8 @@ const { pushRecordToAllJson} = require("./pushRecordToAllJson");
 const { addRecordToLookupTableJson} = require("./addRecordToLookupTableJson");
 const { getOne } = require("./getOne");
 const { createRecord } = require("./createRecord");
-const {lookupOne} = require("./lookupOne");
+const { lookupOne} = require("./lookupOne");
+const { saveFile } = require("./saveFile");
 
 module.exports = {
     createGuid,
@@ -24,4 +25,5 @@ module.exports = {
     getOne,
     lookupOne,
     createRecord,
+    saveFile
 };

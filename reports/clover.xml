@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1732166782252" clover="3.2.0">
+  <project timestamp="1732166782252" name="All files">
+    <metrics statements="190" coveredstatements="169" conditionals="34" coveredconditionals="23" methods="22" coveredmethods="21" elements="246" coveredelements="213" complexity="0" loc="190" ncloc="190" packages="2" files="16" classes="16"/>
+    <package name="cli.actions">
+      <metrics statements="89" coveredstatements="72" conditionals="24" coveredconditionals="14" methods="5" coveredmethods="4"/>
+      <file name="setup.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\cli\actions\setup.js">
+        <metrics statements="49" coveredstatements="44" conditionals="14" coveredconditionals="10" methods="1" coveredmethods="1"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="6" count="10" type="stmt"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="11" count="13" type="stmt"/>
+        <line num="14" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="20" count="13" type="stmt"/>
+        <line num="23" count="13" type="stmt"/>
+        <line num="28" count="13" type="stmt"/>
+        <line num="30" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="13" type="stmt"/>
+        <line num="41" count="13" type="stmt"/>
+        <line num="42" count="13" type="stmt"/>
+        <line num="44" count="26" type="stmt"/>
+        <line num="45" count="26" type="cond" truecount="4" falsecount="0"/>
+        <line num="46" count="14" type="stmt"/>
+        <line num="47" count="14" type="stmt"/>
+        <line num="48" count="12" type="cond" truecount="2" falsecount="2"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="51" count="12" type="stmt"/>
+        <line num="54" count="12" type="stmt"/>
+        <line num="55" count="12" type="stmt"/>
+        <line num="63" count="12" type="stmt"/>
+        <line num="64" count="12" type="stmt"/>
+        <line num="67" count="12" type="stmt"/>
+        <line num="69" count="12" type="stmt"/>
+        <line num="72" count="12" type="stmt"/>
+        <line num="74" count="60" type="cond" truecount="2" falsecount="0"/>
+        <line num="75" count="48" type="stmt"/>
+        <line num="76" count="48" type="stmt"/>
+        <line num="78" count="60" type="stmt"/>
+        <line num="84" count="60" type="stmt"/>
+        <line num="85" count="60" type="stmt"/>
+        <line num="87" count="0" type="stmt"/>
+        <line num="89" count="60" type="stmt"/>
+        <line num="90" count="60" type="stmt"/>
+        <line num="94" count="12" type="stmt"/>
+        <line num="101" count="12" type="stmt"/>
+        <line num="103" count="12" type="stmt"/>
+        <line num="104" count="12" type="stmt"/>
+        <line num="114" count="12" type="stmt"/>
+        <line num="121" count="12" type="stmt"/>
+        <line num="122" count="12" type="stmt"/>
+      </file>
+      <file name="teardown.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\cli\actions\teardown.js">
+        <metrics statements="40" coveredstatements="28" conditionals="10" coveredconditionals="4" methods="4" coveredmethods="3"/>
+        <line num="1" count="10" type="stmt"/>
+        <line num="2" count="10" type="stmt"/>
+        <line num="3" count="10" type="stmt"/>
+        <line num="4" count="10" type="stmt"/>
+        <line num="5" count="10" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="9" count="13" type="stmt"/>
+        <line num="15" count="13" type="stmt"/>
+        <line num="18" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="24" count="13" type="stmt"/>
+        <line num="27" count="13" type="stmt"/>
+        <line num="32" count="13" type="stmt"/>
+        <line num="34" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="13" type="stmt"/>
+        <line num="46" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="47" count="13" type="stmt"/>
+        <line num="48" count="13" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="54" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="65" count="13" type="stmt"/>
+        <line num="67" count="13" type="stmt"/>
+        <line num="68" count="13" type="stmt"/>
+        <line num="73" count="13" type="stmt"/>
+        <line num="75" count="13" type="cond" truecount="1" falsecount="1"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="81" count="12" type="stmt"/>
+        <line num="86" count="12" type="stmt"/>
+        <line num="87" count="99" type="stmt"/>
+        <line num="90" count="12" type="stmt"/>
+        <line num="91" count="12" type="stmt"/>
+        <line num="95" count="13" type="stmt"/>
+      </file>
+    </package>
+    <package name="helpers">
+      <metrics statements="101" coveredstatements="97" conditionals="10" coveredconditionals="9" methods="17" coveredmethods="17"/>
+      <file name="addRecordToLookupTableJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\addRecordToLookupTableJson.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+      </file>
+      <file name="createGuid.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\createGuid.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="14" type="stmt"/>
+        <line num="10" count="51" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+      </file>
+      <file name="createRecord.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\createRecord.js">
+        <metrics statements="11" coveredstatements="8" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="14" type="stmt"/>
+      </file>
+      <file name="folderExists.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\folderExists.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="15" count="30" type="stmt"/>
+        <line num="17" count="30" type="stmt"/>
+        <line num="18" count="30" type="stmt"/>
+        <line num="23" count="30" type="stmt"/>
+        <line num="24" count="30" type="stmt"/>
+        <line num="27" count="14" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+      </file>
+      <file name="getAllJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\getAllJson.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+      </file>
+      <file name="getLookupTableJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\getLookupTableJson.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="27" count="7" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+      </file>
+      <file name="getObjectOutputToJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\getObjectOutputToJson.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="10" count="23" type="stmt"/>
+        <line num="12" count="23" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+      </file>
+      <file name="getOne.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\getOne.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="33" count="14" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\index.js">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="14" type="stmt"/>
+        <line num="2" count="14" type="stmt"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="4" count="14" type="stmt"/>
+        <line num="5" count="14" type="stmt"/>
+        <line num="6" count="14" type="stmt"/>
+        <line num="7" count="14" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="9" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="11" count="14" type="stmt"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+      </file>
+      <file name="lookupOne.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\lookupOne.js">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="6" count="14" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="44" count="14" type="stmt"/>
+      </file>
+      <file name="pushRecordToAllJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\pushRecordToAllJson.js">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="14" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+      </file>
+      <file name="saveFile.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\saveFile.js">
+        <metrics statements="7" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="23" count="3" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="3" type="stmt"/>
+        <line num="32" count="3" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="39" count="14" type="stmt"/>
+      </file>
+      <file name="validation.allJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\validation.allJson.js">
+        <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="22" count="8" type="stmt"/>
+        <line num="24" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="29" count="7" type="stmt"/>
+        <line num="31" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="37" count="14" type="stmt"/>
+      </file>
+      <file name="validation.lookupTableJson.js" path="C:\Users\Sters\Documents\FireHazardLLC\projects\Joe\sloop\src\helpers\validation.lookupTableJson.js">
+        <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="22" count="3" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="33" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="39" count="14" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
