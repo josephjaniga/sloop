@@ -11,20 +11,26 @@ const {fromIni} = require("@aws-sdk/credential-providers");
 const {saveFile} = require("../helpers/saveFile");
 require('dotenv').config();
 
-let credentials;
+let credentials = {};
 
-// Check if the AWS profile is set in the .env file
-if (!process.env.AWS_PROFILE) {
-    throw new Error(
-        "Please set the AWS profile in the" +
-        " .env file to use the AWS SDK"
-    );
-} else {
+// sequence of credentials to check
+
+// if there is a AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY then use that
+if (process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY) {
+    credentials = {
+        accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+        secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
+    };
+// otherwise if there is a AWS_PROFILE then use that
+} else if (process.env.AWS_PROFILE) {
     credentials = fromIni({ profile: process.env.AWS_PROFILE });
-}
+// otherwise throw an error
+} else if (!process.env.AWS_PROFILE) {
+    throw new Error("Please set the AWS profile in the .env file to use the AWS SDK");
+} 
 
 const s3 = new S3({
-    credentials,
+    ...credentials,
     region: "us-east-1", // Specify your bucket's region
 });
 
