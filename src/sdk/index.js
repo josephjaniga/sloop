@@ -15,13 +15,14 @@ let credentials = {};
 
 // sequence of credentials to check
 
-// if there is a AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY then use that
+// if there is a AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY then use those
 if (process.env.AWS_ACCESS_KEY_ID && process.env.AWS_SECRET_ACCESS_KEY) {
     credentials = {
         accessKeyId: process.env.AWS_ACCESS_KEY_ID,
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
     };
-// otherwise if there is a AWS_PROFILE then use that
+    delete process.env.AWS_PROFILE;
+// otherwise if there is a AWS_PROFILE then try to use that
 } else if (process.env.AWS_PROFILE) {
     credentials = fromIni({ profile: process.env.AWS_PROFILE });
 // otherwise throw an error
